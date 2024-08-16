@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Rubik+Glitch&display=swap');
+
+/* Hero.css */
+
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* ความสูงของ hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* เพิ่มการไล่สีดำบางๆ เหนือภาพพื้นหลัง */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 5, 0, 5); /* เพิ่มเงาให้ตัวอักษร */
+    margin-bottom: 20px;
+    font-family: 'Rubik Glitch', sans-serif; /* ใช้ฟอนต์ Rubik Glitch */
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้ตัวอักษร */
+}
+
+.cta-button {
+    background-color: #FFEB36;
+    color: #000000;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ปุ่ม */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px; /* ปรับความสูงของ hero section ในหน้าจอขนาดเล็ก */
+    }
+
+    .hero-text h1 {
+        font-size: 26px; /* ลดขนาดตัวอักษรในหน้าจอขนาดเล็ก */
+    }
+
+    .hero-text p {
+        font-size: 12px; /* ลดขนาดตัวอักษรในหน้าจอขนาดเล็ก */
+    }
+
+    .cta-button {
+        font-size: 14px; /* ลดขนาดปุ่มในหน้าจอขนาดเล็ก */
+    }
+}

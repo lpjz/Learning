@@ -1,0 +1,88 @@
+/* Footer.css */
+
+footer {
+    background-color: #373A40;
+    padding: 10px 20px; /* ปรับ padding ให้เล็กลง */
+    color: #ffffff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px; /* ปรับขนาดตัวอักษรให้เล็กลง */
+}
+
+.footer-logo {
+    font-size: 18px; /* ปรับขนาดโลโก้ให้เล็กลง */
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo-icon {
+    width: 36px; /* ขนาดไอคอนเล็กลง */
+    height: 36px;
+    margin-right: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 10px; /* ลดระยะห่างระหว่างลิงก์ */
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footer-links a {
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff !important; /* เพิ่ม !important เพื่อให้แน่ใจว่าการเปลี่ยนสีจะทำงาน */
+}
+
+.footer-contact-info {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 5px 10px; /* ลด padding อีกในหน้าจอที่เล็ก */
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .footer-logo-icon {
+        width: 28px; /* ขนาดไอคอนเล็กลงอีก */
+        height: 28px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .footer-contact-info {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}

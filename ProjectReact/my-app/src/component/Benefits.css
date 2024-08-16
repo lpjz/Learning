@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Rubik+Glitch&display=swap');
+
+/* Benefits.css */
+
+.benefits {
+    background: linear-gradient(to bottom, #d37904, #754301); /* สีพื้นหลังสีดำ */
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
+
+.benefits h2 {
+    font-size: 46px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Rubik Glitch', sans-serif;
+}
+
+.benefit-features {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.benefit-item {
+    position: relative;
+    width: 400px;  /* ปรับขนาดความกว้างของภาพ */
+    height: 525px; /* ปรับขนาดความสูงของภาพ */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.benefit-item:hover {
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+}
+
+.benefit-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.benefit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: filter 0.3s ease;
+}
+
+.benefit-item:hover .benefit-image img {
+    filter: brightness(100%); /* เพิ่มความสว่างเมื่อ hover */
+}
+
+.benefit-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    opacity: 0.8;
+}
+
+.benefit-caption:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .benefit-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .benefits h2 {
+        font-size: 28px;
+    }
+
+    .benefit-caption {
+        font-size: 20px;
+    }
+}
