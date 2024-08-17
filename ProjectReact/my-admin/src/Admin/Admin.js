@@ -6,16 +6,19 @@ const Admin = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3030/admin/users")
+    fetch("https://langding-page-ea80a5212adc.herokuapp.com/admin/users")
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3030/admin/users/${id}`, {
-      method: "DELETE"
-    })
+    fetch(
+      `https://langding-page-ea80a5212adc.herokuapp.com/admin/users/${id}`,
+      {
+        method: "DELETE"
+      }
+    )
       .then((response) => {
         if (response.ok) {
           setUsers(users.filter((user) => user.id !== id));
@@ -73,12 +76,12 @@ const Admin = () => {
                 </div>
                 <div className="user-image-container">
                   <img
-                    src={`http://localhost:3030/uploads/${user.file}`}
+                    src={`https://langding-page-ea80a5212adc.herokuapp.com/uploads/${user.file}`}
                     alt={user.name}
                     className="user-image"
                     onClick={() =>
                       handleImageClick(
-                        `http://localhost:3030/uploads/${user.file}`
+                        `https://langding-page-ea80a5212adc.herokuapp.com/uploads/${user.file}`
                       )
                     }
                   />

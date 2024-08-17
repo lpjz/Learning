@@ -9,7 +9,6 @@ const JoinNow = () => {
 
   const handleNameChange = (e) => {
     const value = e.target.value;
-    // ตรวจสอบว่าค่าที่พิมพ์เข้ามาเป็นตัวอักษร (ไม่ใช่ตัวเลขหรืออักษรพิเศษ)
     if (/^[a-zA-Z\s]*$/.test(value)) {
       setName(value);
     }
@@ -36,7 +35,7 @@ const JoinNow = () => {
     formData.append("age", age);
     formData.append("file", file);
 
-    fetch("http://localhost:3030/register", {
+    fetch("https://langding-page-ea80a5212adc.herokuapp.com/register", {
       method: "POST",
       body: formData
     })
@@ -49,14 +48,14 @@ const JoinNow = () => {
         return response.text();
       })
       .then((data) => {
-        alert(data); // แสดงข้อความจากเซิร์ฟเวอร์
+        alert(data);
         setName("");
         setGender("");
         setAge("");
         setFile(null);
       })
       .catch((error) => {
-        alert(error.message); // แสดงข้อความ Error เช่น "You have already registered."
+        alert(error.message);
       });
   };
 
