@@ -6,7 +6,7 @@ const multer = require("multer");
 const path = require("path");
 
 const app = express();
-const port = 3030;
+const port = process.env.PORT || 3306; // กำหนดค่าพอร์ต
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -14,10 +14,11 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // สร้างการเชื่อมต่อกับ MySQL
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "register_infomation"
+  host: "t89yihg12rw77y6f.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "xhdg3vp59a3lqizu",
+  password: "p48xhsxzoiqzvcsh",
+  database: "mnw83d9ck42xsdph",
+  port: "3306"
 });
 
 db.connect((err) => {

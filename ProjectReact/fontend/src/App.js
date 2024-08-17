@@ -7,7 +7,7 @@ import Benefits from "./component/Benefits";
 import SuccessStories from "./component/SuccessStories";
 import JoinNow from "./component/JoinNow";
 import Footer from "./component/Footer";
-import Admin from "./Admin/Admin";
+// import Admin from "./Admin/Admin";
 
 function LandingPage() {
   return (
@@ -28,7 +28,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/admin" element={<Admin />} />
+        {/* <Route path="/admin" element={<Admin />} /> */}
       </Routes>
     </Router>
   );
